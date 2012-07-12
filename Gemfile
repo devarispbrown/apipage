@@ -8,10 +8,14 @@ gem 'rails', '3.2.6'
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
+  gem 'guard-rspec'
 end
 
 group :test do
   gem 'capybara'
+  gem 'rb-fsevent'
+  gem 'ruby_gntp'
+	gem 'launchy'
 end
 
 group :production do
