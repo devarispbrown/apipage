@@ -1,5 +1,7 @@
 Apipage::Application.routes.draw do
   
+  root :to => 'Pages#home'
+  
   get "pages/blog"
 
   get "pages/home"
