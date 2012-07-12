@@ -1,4 +1,15 @@
 Apipage::Application.routes.draw do
+  
+  get "pages/blog"
+
+  get "pages/home"
+
+  get "pages/getstarted"
+
+  get "pages/docs"
+
+  get "pages/support"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
