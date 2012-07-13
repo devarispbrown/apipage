@@ -2,15 +2,11 @@ Apipage::Application.routes.draw do
   
   root :to => 'Pages#home'
   
-  get "pages/blog"
-
-  get "pages/home"
-
-  get "pages/getstarted"
-
-  get "pages/docs"
-
-  get "pages/support"
+  match '/blog',    to: 'pages#blog'
+  match '/home',    to: 'pages#home'
+  match '/getstarted', to: 'pages#getstarted'
+  match '/docs', to: 'pages#docs'
+  match '/support', to: 'pages#support'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
