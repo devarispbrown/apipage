@@ -3,6 +3,7 @@
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
+$lightGray: #999;
 
 /* universal */
 
@@ -18,11 +19,11 @@ section {
   overflow: auto;
 }
 
-/*textarea {
+textarea {
   resize: vertical;
-}*/
+}
 
-.center {
+.left {
   text-align: left;
   h1 {
     margin-bottom: 10px;
@@ -102,6 +103,8 @@ footer {
     li {
       float: left;
       margin-left: 15px;
+	  font-size: 14px;
+	  color: $grayLight;
     }
   }
 }
