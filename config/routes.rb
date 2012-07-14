@@ -4,9 +4,27 @@ Apipage::Application.routes.draw do
   
   match '/blog',    to: 'pages#blog'
   match '/home',    to: 'pages#home'
+  
   match '/getstarted', to: 'pages#getstarted'
+  match '/getstarted/ios', to: 'pages#ios'
+  match '/getstarted/android', to: 'pages#android'
+  match '/getstarted/wp', to: 'pages#wp'
+  match '/getstarted/as', to: 'pages#as'
+  match '/getstarted/html5', to: 'pages#html5'
+  match '/getstarted/unity', to: 'pages#unity'
+  match '/getstarted/pg', to: 'pages#pg'
+  match '/getstarted/corona', to: 'pages#corona'
+  match '/getstarted/marmalade', to: 'pages#marmalade'
+  
+  
+  match '/pricing', to: 'pages#pricing'
+  
   match '/docs', to: 'pages#docs'
+  
   match '/support', to: 'pages#support'
+  match '/support/contact', to: 'pages#contact'
+  match '/support/forum', to: 'pages#forum'
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

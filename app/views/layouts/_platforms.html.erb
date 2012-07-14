@@ -1,16 +1,15 @@
 <div class="well sidebar-nav">
 	<ul class="nav nav-list">
     	<li class="nav-header">Platforms</li>
-       	<li><a href="#">iOS</a></li>
-        <li><a href="#">Android</a></li>
-		<li><a href="#">Windows Phone</a></li>
-        <li><a href="#">Actionscript</a></li>
-		<li><a href="#">HTML5</a></li>
+       	<li><%= link_to "iOS",    getstarted_ios_path %></li>
+        <li><%= link_to "Android",    getstarted_android_path %></li>
+		<li><%= link_to "Windows Phone", getstarted_wp_path %></li>
+        <li><%= link_to "Actionscript", getstarted_as_path %></li>
+		<li><%= link_to "HTML5", getstarted_html5_path %></li>
         <li class="nav-header">Integrations</li>
-        <li><a href="#">Unity</a></li>
-		<li><a href="#">PhoneGap</a></li>
-		<li><a href="#">Corona</a></li>
-        <li><a href="#">Marmalade</a></li>
-        <li><a href="#">Appcelerator</a></li>
+        <li><%= link_to "Unity", getstarted_unity_path %></li>
+		<li><%= link_to "Phone Gap", getstarted_pg_path %></li>
+		<li><%= link_to "Corona", getstarted_corona_path %></li>
+        <li><%= link_to "Marmalade", getstarted_marmalade_path %></li>
 	</ul>
 </div>
