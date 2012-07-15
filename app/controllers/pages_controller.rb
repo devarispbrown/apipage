@@ -49,5 +49,8 @@ class PagesController < ApplicationController
   
   def marmalade
   end
+  
+  def signup
+  end
 
 end

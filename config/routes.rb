@@ -25,6 +25,8 @@ Apipage::Application.routes.draw do
   match '/support/contact', to: 'pages#contact'
   match '/support/forum', to: 'pages#forum'
   
+  match '/signup', to: 'pages#signup'
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
