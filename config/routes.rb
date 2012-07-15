@@ -1,5 +1,7 @@
 Apipage::Application.routes.draw do
   
+  get "users/new"
+
   root :to => 'Pages#home'
   
   match '/blog',    to: 'pages#blog'
@@ -25,7 +27,7 @@ Apipage::Application.routes.draw do
   match '/support/contact', to: 'pages#contact'
   match '/support/forum', to: 'pages#forum'
   
-  match '/signup', to: 'pages#signup'
+  match '/signup', to: 'users#new'
   
 
   # The priority is based upon order of creation:
