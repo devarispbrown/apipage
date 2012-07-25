@@ -3,31 +3,77 @@
 	<div class="row">
 		<div class="span12">
 			<h1>Klick Push REST API Reference</h1>
+			<p>The Klickpush API gives partners and independent developers access to the full range of Klickpush functionality. The API employs a set of OAuth-protected JSON/REST HTTP endpoints accessible at api.klickpush.com. To get started, contact <a href="mailto:devaris@klickpush.com">devaris@klickpush.com</a> to receive credentials</p>
 		</div>
 	</div>
 	<div class="row">
 		<div class="span12">
-			<h2>Genres</h2>
+			<p><h2>Genres</h2></p>
+			<h3>To list all the musical genres Klickpush supports, issue an HTTP GET to /genres (OAuth required).</h3>
 			<div class="row-fluid">
-				<div class="span6"><h3>GET /genres</h3></div>
-			    <div class="span6"><h3>Returns list of all available genres</h3></div>
+				<div class="span3"><br /><p>GET /genres</p></div>
+			    <div class="span6"><br /><p>Returns list of all available genres</p></div>
+			</div>
+			<div class="row-fluid">
+				<div class="span3"><p>Example Request</p></div>
+			    <div class="span6"><p>URL: http://api.klickpush.com/genres</p></div>
+			</div>
+			<div class="row-fluid">
+				<div class="span3"><p>Sample Response</p></div>
+			    <div class="span6"><p><code>=> ["classical", "rap", "gospel"]</code></p></div>
 			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="span12">
 			<p><h2>Offers</h2></p>
+			<h3>Klickpush supports getting an offer by genre. Offers are either for an album, or an individual track.(OAuth required)</h3>
 			<div class="row-fluid">
-				<div class="span6"><h3>GET /{genre}/single</h3></div>
-			    <div class="span6"><h3>Returns random song in a particular genre</h3></div>
+				<div class="span3"><br /><p>GET /{genre}/single</p></div>
+			    <div class="span6"><br /><p>Returns random song in a particular genre</p></div>
 			</div>
-		</div>
+			<div class="row-fluid">
+				<div class="span3"><p>Example Request</p></div>
+			    <div class="span6"><p>URL: http://api.klickpush.com/offers/rock/single</p></div>
+			</div>
+			<div class="row-fluid">
+				<div class="span3"><p>Sample Response</p></div>
+			    <div class="span6"><p><code>=> [{"artist_name"=>"Last 2 Weeks",
+				     "artwork"=>"http://klickpushmedia.s3.amazonaws.com/c/0/c0ddf69668be_cropped.jpg",
+				     "track"=>{
+				       "track_name"=>"All My Friends", 
+				       "urls"=>{
+				         "original"=>"http://klickpushmedia.s3.amazonaws.com/8/3/83db8a0c99e5.mp3",
+				         "preview"=>"http://klickpushmedia.s3.amazonaws.com/8/3/83db8a0c99e5_sample.mp3"},
+				       "is_explicit"=>false
+				     }
+				  }]</code></p></div>
+			</div>
+		</div>	
 	</div>
 	<div class="row">
 		<div class="span12">
 				<div class="row-fluid">
-					<div class="span6"><h3>GET /{genre}/album</h3></div>
-			    	<div class="span6"><h3>Returns random album in a particular genre</h3></div>
+					<div class="span3"><br /><p>GET /{genre}/album</p></div>
+			    	<div class="span6"><br /><p>Returns random album in a particular genre</p></div>
+				</div>
+				<div class="row-fluid">
+					<div class="span3"><p>Example Request</p></div>
+				    <div class="span6"><p>URL: http://api.klickpush.com/offers/rock/album</p></div>
+				</div>
+				<div class="row-fluid">
+					<div class="span3"><p>Sample Response</p></div>
+				    <div class="span6"><p><code>=> [{"artist_name"=>"sounddrug",
+					     "artwork"=>"http://klickpushmedia.s3.amazonaws.com/0/a/0a5f49a3997f_cropped.jpg",
+					     "tracks"=>[
+					       {"track_name"=>"Useless",
+					        "urls"=>{
+					          "original"=>"http://klickpushmedia.s3.amazonaws.com/a/4/a41d6f910c39.mp3",
+					          "preview"=>"http://klickpushmedia.s3.amazonaws.com/a/4/a41d6f910c39_sample.mp3"},
+					        "is_explicit"=>false, "is_featured"=>false
+					       }
+					     ]
+					  }]</code></p></div>
 				</div>
 		</div>
 	</div>
